@@ -33,6 +33,9 @@
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .tagline {
@@ -44,14 +47,16 @@
 
 .app-main {
   flex: 1;
-  padding: 2rem 1rem;
-  margin: 0 auto;
+  padding: 2rem clamp(1rem, 5vw, 4rem);
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .app-footer {
   background-color: #f3f4f6;
-  padding: 1rem;
+  padding: 1rem clamp(1rem, 5vw, 4rem);
   text-align: center;
   color: #6b7280;
   font-size: 0.875rem;
@@ -63,8 +68,11 @@
 .selection-page,
 .tournament-page,
 .results-page {
-  max-width: 800px;
-  margin: 0 auto;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .setup-page h1,
@@ -74,6 +82,7 @@
   font-size: 2rem;
   margin-bottom: 1rem;
   color: #1f2937;
+  text-align: center;
 }
 
 .setup-page p,
@@ -83,6 +92,7 @@
   font-size: 1.125rem;
   color: #6b7280;
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 /* Button styles */
@@ -157,6 +167,7 @@
   padding: 1.5rem;
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
   border: 1px solid #e5e7eb;
+  margin-bottom: 1.5rem;
 }
 
 /* Setup page specific styles */
@@ -338,48 +349,8 @@
 .setup-actions {
   display: flex;
   gap: 1rem;
-  justify-content: flex-end;
+  justify-content: center;
   margin-top: 2rem;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-  .app-header {
-    padding: 1.5rem 1rem;
-  }
-  
-  .app-header h1 {
-    font-size: 2rem;
-  }
-  
-  .tagline {
-    font-size: 1rem;
-  }
-  
-  .app-main {
-    padding: 1rem;
-  }
-
-  .color-inputs {
-    grid-template-columns: 1fr;
-  }
-
-  .principle-input-wrapper {
-    flex-direction: column;
-  }
-
-  .setup-actions {
-    flex-direction: column;
-  }
-
-  .branding-preview {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .preview-badge {
-    margin-left: 0;
-  }
 }
 
 /* Selection page styles */
@@ -429,11 +400,13 @@
   gap: 1rem;
   margin-bottom: 2rem;
   align-items: center;
+  justify-content: center;
 }
 
 .search-box {
   flex: 1;
   min-width: 200px;
+  max-width: 400px;
 }
 
 .search-input {
@@ -448,6 +421,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+  justify-content: center;
 }
 
 .category-btn {
@@ -500,7 +474,7 @@
 
 .principles-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1rem;
 }
 
@@ -626,40 +600,11 @@
 
 .selection-actions {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 2rem;
   margin-top: 3rem;
   padding-top: 2rem;
   border-top: 1px solid #e5e7eb;
-}
-
-/* Responsive design for selection page */
-@media (max-width: 768px) {
-  .selection-controls {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .category-filter {
-    justify-content: center;
-  }
-
-  .principles-list {
-    grid-template-columns: 1fr;
-  }
-
-  .selection-actions {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .modal-content {
-    margin: 1rem;
-    padding: 1.5rem;
-  }
-
-  .modal-actions {
-    flex-direction: column;
-  }
 }
 
 /* Tournament page styles */
@@ -667,6 +612,7 @@
   min-height: calc(100vh - 200px);
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .tournament-loading {
@@ -682,6 +628,8 @@
   border-radius: 0.75rem;
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
   border: 1px solid #e5e7eb;
+  width: 100%;
+  max-width: 800px;
 }
 
 .tournament-header h1 {
@@ -747,7 +695,6 @@
   flex-direction: column;
   justify-content: center;
   max-width: 1000px;
-  margin: 0 auto;
   width: 100%;
   padding: 2rem 1rem;
 }
@@ -874,6 +821,7 @@
   font-weight: 700;
   font-size: 1.5rem;
   box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  justify-self: center;
 }
 
 .versus-text {
@@ -911,6 +859,8 @@
   margin-top: 2rem;
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
   border: 1px solid #e5e7eb;
+  width: 100%;
+  max-width: 800px;
 }
 
 .bracket-container h3 {
@@ -997,53 +947,6 @@
   font-style: italic;
 }
 
-/* Responsive design for tournament */
-@media (max-width: 768px) {
-  .tournament-info {
-    flex-direction: column;
-    gap: 1rem;
-    text-align: center;
-  }
-
-  .round-info,
-  .progress-info {
-    align-items: center;
-  }
-
-  .tournament-progress-bar {
-    width: 250px;
-  }
-
-  .versus-container {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  .versus-divider {
-    width: 60px;
-    height: 60px;
-    font-size: 1.25rem;
-    justify-self: center;
-  }
-
-  .principle-option {
-    padding: 1.5rem;
-    min-height: 160px;
-  }
-
-  .principle-option .principle-title {
-    font-size: 1.25rem;
-  }
-
-  .bracket-rounds {
-    grid-template-columns: 1fr;
-  }
-
-  .bracket-container {
-    padding: 1rem;
-  }
-}
-
 /* Results page styles */
 .results-header {
   text-align: center;
@@ -1072,6 +975,8 @@
   margin-bottom: 2rem;
   opacity: 0;
   animation: fadeInUp 0.6s ease forwards;
+  width: 100%;
+  max-width: 800px;
 }
 
 .results-section:nth-child(2) { animation-delay: 0.1s; }
@@ -1104,7 +1009,7 @@
 /* Hierarchy Grid */
 .hierarchy-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1rem;
 }
 
@@ -1225,7 +1130,7 @@
 
 .profile-sections {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
 }
 
@@ -1351,7 +1256,7 @@
 
 .alignment-sections {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
 }
@@ -1403,15 +1308,129 @@
   border-radius: 0.75rem;
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
   border: 1px solid #e5e7eb;
+  flex-wrap: wrap;
 }
 
 .action-group {
   display: flex;
   gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-/* Responsive design for results */
+/* Responsive design */
 @media (max-width: 768px) {
+  .app-header {
+    padding: 1.5rem 1rem;
+  }
+  
+  .app-header h1 {
+    font-size: 2rem;
+  }
+  
+  .tagline {
+    font-size: 1rem;
+  }
+  
+  .app-main {
+    padding: 1rem;
+  }
+
+  .color-inputs {
+    grid-template-columns: 1fr;
+  }
+
+  .principle-input-wrapper {
+    flex-direction: column;
+  }
+
+  .setup-actions {
+    flex-direction: column;
+  }
+
+  .branding-preview {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .preview-badge {
+    margin-left: 0;
+  }
+
+  /* Selection page responsive */
+  .selection-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .category-filter {
+    justify-content: center;
+  }
+
+  .principles-list {
+    grid-template-columns: 1fr;
+  }
+
+  .selection-actions {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .modal-content {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  .modal-actions {
+    flex-direction: column;
+  }
+
+  /* Tournament responsive */
+  .tournament-info {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .round-info,
+  .progress-info {
+    align-items: center;
+  }
+
+  .tournament-progress-bar {
+    width: 250px;
+  }
+
+  .versus-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .versus-divider {
+    width: 60px;
+    height: 60px;
+    font-size: 1.25rem;
+    order: 2;
+  }
+
+  .principle-option {
+    padding: 1.5rem;
+    min-height: 160px;
+  }
+
+  .principle-option .principle-title {
+    font-size: 1.25rem;
+  }
+
+  .bracket-rounds {
+    grid-template-columns: 1fr;
+  }
+
+  .bracket-container {
+    padding: 1rem;
+  }
+
+  /* Results responsive */
   .results-header h1 {
     font-size: 2rem;
   }
