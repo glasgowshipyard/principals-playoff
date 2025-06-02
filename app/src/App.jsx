@@ -13,7 +13,7 @@ function App() {
       <Router>
         <div className="app">
           <header className="app-header">
-            <h1>Principals Playoff</h1>
+            <h1>Principles Playoff</h1>
             <p className="tagline">Tournament-style elimination to discover what actually drives you</p>
           </header>
           

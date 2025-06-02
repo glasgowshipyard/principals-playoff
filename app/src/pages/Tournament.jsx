@@ -118,7 +118,7 @@ const Tournament = () => {
   return (
     <div className="tournament-page">
       <div className="tournament-header">
-        <h1>Principals Playoff</h1>
+        <h1>Principles Playoff</h1>
         <div className="tournament-info">
           <div className="round-info">
             <span className="round-name">{getCurrentRoundName()}</span>

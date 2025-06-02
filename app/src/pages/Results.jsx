@@ -71,7 +71,7 @@ const Results = () => {
   return (
     <div className="results-page">
       <div className="results-header">
-        <h1>Your Principals Playoff Results</h1>
+        <h1>Your Principles Playoff Results</h1>
         <div className="completion-info">
           <span className="completion-time">Completed in {completionTimeDisplay}</span>
           <span className="completion-date">

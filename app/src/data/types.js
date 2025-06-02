@@ -1,5 +1,5 @@
 /**
- * Core data types for Principals Playoff
+ * Core data types for Principles Playoff
  */
 
 // Principle data structure

@@ -1,9 +1,9 @@
-# Software Requirements Specification: Principals Playoff
+# Software Requirements Specification: Principles Playoff
 
 ## 1. Introduction
 
 ### 1.1 Purpose
-This document specifies the functional and non-functional requirements for Principals Playoff, a web application that helps users discover their core guiding principles through tournament-style elimination.
+This document specifies the functional and non-functional requirements for Principles Playoff, a web application that helps users discover their core guiding principles through tournament-style elimination.
 
 ### 1.2 Scope
 - Single-page web application (SPA)
@@ -385,4 +385,4 @@ interface Results {
 
 ---
 
-*This specification provides the complete technical foundation for building Principals Playoff as a robust, privacy-first web application that delivers authentic insights into human decision-making priorities.*
+*This specification provides the complete technical foundation for building Principles Playoff as a robust, privacy-first web application that delivers authentic insights into human decision-making priorities.*

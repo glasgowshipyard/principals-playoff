@@ -1,4 +1,4 @@
-# Principals Playoff - Deployment Guide
+# Principles Playoff - Deployment Guide
 
 ## Cloudflare Pages Deployment
 
@@ -36,7 +36,7 @@
 1. **Create wrangler.jsonc in project root:**
    ```json
    {
-     "name": "principals-playoff",
+     "name": "principles-playoff",
      "compatibility_date": "2025-06-02",
      "assets": {
        "directory": "./app/dist"
@@ -50,7 +50,7 @@
    npm install
    npm run build
    cd ..
-   npx wrangler pages deploy app/dist --project-name=principals-playoff
+   npx wrangler pages deploy app/dist --project-name=principles-playoff
    ```
 
 ## Correct Cloudflare Pages Settings

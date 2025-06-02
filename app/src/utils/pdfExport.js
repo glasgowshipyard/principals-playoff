@@ -74,7 +74,7 @@ export const generatePDFReport = async (results, configuration) => {
   }
 
   // Title
-  addHeading('Principals Playoff Results', 1);
+  addHeading('Principles Playoff Results', 1);
   
   // Completion info
   const completionDate = new Date(results.metadata.timestamp).toLocaleDateString();
@@ -225,7 +225,7 @@ export const generatePDFReport = async (results, configuration) => {
   pdf.setFontSize(8);
   pdf.setFont('helvetica', 'normal');
   pdf.setTextColor('#999999');
-  pdf.text('Generated with Principals Playoff | claude.ai/code', margin, yPosition);
+  pdf.text('Generated with Principles Playoff | claude.ai/code', margin, yPosition);
   pdf.text(`Generated on ${new Date().toLocaleDateString()}`, pageWidth - margin - 40, yPosition);
 
   return pdf;
@@ -234,7 +234,7 @@ export const generatePDFReport = async (results, configuration) => {
 export const downloadPDF = async (results, configuration) => {
   try {
     const pdf = await generatePDFReport(results, configuration);
-    const fileName = `principals-playoff-results-${new Date().getTime()}.pdf`;
+    const fileName = `principles-playoff-results-${new Date().getTime()}.pdf`;
     pdf.save(fileName);
   } catch (error) {
     console.error('Error generating PDF:', error);

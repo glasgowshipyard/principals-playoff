@@ -252,7 +252,7 @@ const Setup = () => {
               {logoPreview && <img src={logoPreview} alt="Logo" className="preview-logo" />}
               {localConfig.orgName && <h3 className="preview-org-name">{localConfig.orgName}</h3>}
               <div className="preview-badge" style={{ backgroundColor: localConfig.primaryColor }}>
-                Principals Playoff
+                Principles Playoff
               </div>
             </div>
           </div>

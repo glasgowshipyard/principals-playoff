@@ -1,4 +1,4 @@
-# Principals Playoff
+# Principles Playoff
 
 **Tournament-style elimination to discover what actually drives you.**
 
@@ -6,7 +6,7 @@ No surveys, no corporate fluff - just head-to-head competition until one princip
 
 ## What It Does
 
-Principals Playoff helps you discover your core guiding principles through a familiar March Madness-style tournament. You'll face impossible choices, revealing what truly matters when you can't have everything.
+Principles Playoff helps you discover your core guiding principles through a familiar March Madness-style tournament. You'll face impossible choices, revealing what truly matters when you can't have everything.
 
 - **30 Core Principles** across 6 fundamental human drives
 - **Custom Principles** - add your own to any category
@@ -84,7 +84,7 @@ Perfect for consultants, HR departments, executive coaches, and team development
 
 ## Getting Started
 
-1. Visit [principalsplayoff.com](https://principalsplayoff.com)
+1. Visit [principlesplayoff.com](https://principlesplayoff.com)
 2. Optional: Upload logo and set branding
 3. Select your 16 principles
 4. Play through the tournament
@@ -141,7 +141,7 @@ MIT License - use it, modify it, deploy it however serves your goals.
 ## Support
 
 Questions? Issues? Suggestions? 
-[Open an issue](https://github.com/buildingtheelite/principals-playoff/issues) or [start a discussion](https://github.com/buildingtheelite/principals-playoff/discussions).
+[Open an issue](https://github.com/buildingtheelite/principles-playoff/issues) or [start a discussion](https://github.com/buildingtheelite/principles-playoff/discussions).
 
 ---
 
