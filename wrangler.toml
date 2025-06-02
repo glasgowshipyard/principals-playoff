@@ -1,6 +1,4 @@
 name = "principals-playoff"
 compatibility_date = "2025-06-02"
 
-[assets]
-directory = "./app/dist"
-html_handling = "auto-trailing-slash"
+pages_build_output_dir = "app/dist"
