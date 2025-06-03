@@ -1,8 +1,8 @@
 # Principles Playoff
 
-**Tournament-style elimination to discover what actually drives you.**
+**Tournament-style elimination to discover what actually drives us**
 
-No surveys, no corporate fluff - just head-to-head competition until one principle stands supreme.
+A head to head of guiding principles.
 
 ## What It Does
 
