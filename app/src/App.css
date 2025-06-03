@@ -925,7 +925,8 @@ p {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgb(37 99 235 / 0.95);
+  background: rgb(37 99 235 / 0.98);
+  backdrop-filter: blur(4px);
   color: var(--color-white);
   display: flex;
   align-items: center;
