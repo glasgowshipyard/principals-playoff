@@ -225,7 +225,7 @@ export const generatePDFReport = async (results, configuration) => {
   pdf.setFontSize(8);
   pdf.setFont('helvetica', 'normal');
   pdf.setTextColor('#999999');
-  pdf.text('Generated with Principles Playof', margin, yPosition);
+  pdf.text('Generated with Principles Playoff', margin, yPosition);
   pdf.text(`Generated on ${new Date().toLocaleDateString()}`, pageWidth - margin - 40, yPosition);
 
   return pdf;
