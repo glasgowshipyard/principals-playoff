@@ -7,7 +7,8 @@ const Results = () => {
   const navigate = useNavigate();
   const { state, actions } = useAppState();
   const { results, configuration } = state;
-
+  
+  const [showOrgAlignment, setShowOrgAlignment] = useState(false);
   const [completionTimeDisplay, setCompletionTimeDisplay] = useState('');
 
   useEffect(() => {
@@ -22,6 +23,13 @@ const Results = () => {
       const minutes = Math.floor(results.metadata.completionTime / 60000);
       const seconds = Math.floor((results.metadata.completionTime % 60000) / 1000);
       setCompletionTimeDisplay(`${minutes}:${seconds.toString().padStart(2, '0')}`);
+    }
+
+    // Show organizational alignment after a delay if available
+    if (results.organizationalAlignment) {
+      setTimeout(() => {
+        setShowOrgAlignment(true);
+      }, 2000);
     }
   }, [results, navigate]);
 
@@ -163,6 +171,88 @@ const Results = () => {
           </div>
         </div>
       </div>
+
+      {/* Organizational Alignment (if available) */}
+      {results.organizationalAlignment && (
+        <div className={`results-section ${showOrgAlignment ? 'show' : ''}`}>
+          <div className="card org-alignment-card">
+            <h2>Organizational Alignment Analysis</h2>
+            <p className="section-description">
+              How well do your personal principles align with your organization's stated values?
+            </p>
+
+            <div className="alignment-score">
+              <div className="score-circle">
+                <span className="score-number">{results.organizationalAlignment.alignmentScore}</span>
+                <span className="score-label">% Match</span>
+              </div>
+              <div className="score-interpretation">
+                {results.organizationalAlignment.alignmentScore >= 70 ? (
+                  <span className="score-good">Strong alignment - your values naturally fit</span>
+                ) : results.organizationalAlignment.alignmentScore >= 40 ? (
+                  <span className="score-moderate">Moderate alignment - some areas to explore</span>
+                ) : (
+                  <span className="score-low">Lower alignment - opportunities for discussion</span>
+                )}
+              </div>
+            </div>
+
+            <div className="alignment-sections">
+              {results.organizationalAlignment.matches.length > 0 && (
+                <div className="alignment-section">
+                  <h3>Strong Matches</h3>
+                  <ul className="insight-list">
+                    {results.organizationalAlignment.matches.map((match, index) => (
+                      <li key={index} className="insight-item match">
+                        <span className="insight-icon">✅</span>
+                        {match}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {results.organizationalAlignment.conflicts.length > 0 && (
+                <div className="alignment-section">
+                  <h3>Areas to Explore</h3>
+                  <ul className="insight-list">
+                    {results.organizationalAlignment.conflicts.map((conflict, index) => (
+                      <li key={index} className="insight-item conflict">
+                        <span className="insight-icon">🔍</span>
+                        {conflict}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              <div className="alignment-section">
+                <h3>Navigation Strategies</h3>
+                <ul className="insight-list">
+                  {results.organizationalAlignment.strategies.map((strategy, index) => (
+                    <li key={index} className="insight-item strategy">
+                      <span className="insight-icon">🎯</span>
+                      {strategy}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="alignment-section">
+                <h3>Discussion Starters</h3>
+                <ul className="insight-list">
+                  {results.organizationalAlignment.discussionPoints.map((point, index) => (
+                    <li key={index} className="insight-item discussion">
+                      <span className="insight-icon">💬</span>
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Evolution Note */}
       <div className="results-section">

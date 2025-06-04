@@ -3,8 +3,10 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import { AppStateProvider } from './hooks/useAppState.js';
 import Setup from './pages/Setup.jsx';
 import Selection from './pages/Selection.jsx';
+import ProSelection from './pages/ProSelection.jsx';
 import Tournament from './pages/Tournament.jsx';
 import Results from './pages/Results.jsx';
+import ProResults from './pages/ProResults.jsx';
 import './App.css';
 
 function App() {
@@ -18,13 +20,17 @@ function App() {
           </header>
           
           <main className="app-main">
-            <Routes>
-              <Route path="/setup" element={<Setup />} />
-              <Route path="/selection" element={<Selection />} />
-              <Route path="/tournament" element={<Tournament />} />
-              <Route path="/results" element={<Results />} />
-              <Route path="/" element={<Navigate to="/setup" replace />} />
-            </Routes>
+          <Routes>
+            <Route path="/" element={<Navigate to="/selection" replace />} />
+            <Route path="/selection" element={<Selection />} />
+            <Route path="/tournament" element={<Tournament />} />
+            <Route path="/results" element={<Results />} />
+            
+            <Route path="/pro" element={<Setup />} />
+            <Route path="/pro/selection" element={<ProSelection />} />
+            <Route path="/pro/tournament" element={<Tournament />} />
+            <Route path="/pro/results" element={<ProResults />} />
+          </Routes>          
           </main>
           
           <footer className="app-footer">
