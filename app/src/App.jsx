@@ -14,7 +14,7 @@ function App() {
         <div className="app">
           <header className="app-header">
             <h1>Principles Playoff</h1>
-            <p className="tagline">Tournament-style elimination to discover what actually drives you</p>
+            <p className="tagline">Tournament-style elimination to discover what actually drives us</p>
           </header>
           
           <main className="app-main">
