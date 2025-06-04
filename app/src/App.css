@@ -931,8 +931,6 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: .9;
-  z-index: 1;
   transition: opacity var(--transition-slow);
   border-radius: var(--radius-lg);
 }
