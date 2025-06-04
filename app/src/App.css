@@ -926,12 +926,13 @@ p {
   right: 0;
   bottom: 0;
   background: rgb(37 99 235 / 0.98);
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(2px);
   color: var(--color-white);
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0;
+  opacity: .9;
+  z-index: 1;
   transition: opacity var(--transition-slow);
   border-radius: var(--radius-lg);
 }
@@ -1223,6 +1224,7 @@ p {
   font-size: var(--font-size-lg);
   font-weight: 700;
   margin: 0 0 var(--space-md) 0;
+  padding-top: var(--space-sm);
   color: var(--color-text-primary);
 }
 
